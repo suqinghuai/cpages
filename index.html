@@ -650,7 +650,7 @@ body.nav-open .menu-btn i{background:#fff;}
 <main>
   <section class="hero" aria-label="首屏展示">
     <div class="hero-slide is-active">
-      <img src="media/hero-1.jpg" alt="国际商用车展会现场展馆全景">
+      <img src="media/hero-1.jpg" alt="国际商用车展会现场展馆全景" fetchpriority="high">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">SHUNLONG TECHNOLOGY</p>
@@ -665,7 +665,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-2.jpg" alt="展会现场人流与各行业展台">
+      <img data-src="media/hero-2.jpg" alt="展会现场人流与各行业展台">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">DESIGN &amp; BUILD</p>
@@ -679,7 +679,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-3.jpg" alt="酒店餐饮用品展会展台阵列">
+      <img data-src="media/hero-3.jpg" alt="酒店餐饮用品展会展台阵列">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">BUSINESS VISIT &amp; GROUND SERVICE</p>
@@ -694,7 +694,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-4.jpg" alt="食品糖果展区彩色展台">
+      <img data-src="media/hero-4.jpg" alt="食品糖果展区彩色展台">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">SHUNLONG TECHNOLOGY</p>
@@ -709,7 +709,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-5.jpg" alt="美容清洁用品展台洽谈现场">
+      <img data-src="media/hero-5.jpg" alt="美容清洁用品展台洽谈现场">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">DESIGN &amp; BUILD</p>
@@ -723,7 +723,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-6.jpg" alt="家居日用品展会过道人流">
+      <img data-src="media/hero-6.jpg" alt="家居日用品展会过道人流">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">BUSINESS VISIT &amp; GROUND SERVICE</p>
@@ -738,7 +738,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-7.jpg" alt="两轮车与自行车展区全景">
+      <img data-src="media/hero-7.jpg" alt="两轮车与自行车展区全景">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">SHUNLONG TECHNOLOGY</p>
@@ -753,7 +753,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-8.jpg" alt="消费电子与通信设备展台">
+      <img data-src="media/hero-8.jpg" alt="消费电子与通信设备展台">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">DESIGN &amp; BUILD</p>
@@ -767,7 +767,7 @@ body.nav-open .menu-btn i{background:#fff;}
     </div>
 
     <div class="hero-slide">
-      <img src="media/hero-9.jpg" alt="展会活动嘉宾合影">
+      <img data-src="media/hero-9.jpg" alt="展会活动嘉宾合影">
       <div class="hero-cap">
         <div class="wrap">
           <p class="hero-kicker">BUSINESS VISIT &amp; GROUND SERVICE</p>
@@ -955,6 +955,10 @@ body.nav-open .menu-btn i{background:#fff;}
     function go(n){
       idx = (n + slides.length) % slides.length;
       slides.forEach(function(s, i){ s.classList.toggle('is-active', i === idx); });
+      var cur = slides[idx].querySelector('img');
+      if (cur && cur.dataset && cur.dataset.src && !cur.getAttribute('src')) {
+        cur.setAttribute('src', cur.dataset.src);
+      }
       dots.forEach(function(d, i){
         d.classList.toggle('is-active', i === idx);
         d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
