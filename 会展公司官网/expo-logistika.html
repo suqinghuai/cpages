@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027） | 抚顺顺隆科技有限公司</title>
+<meta name="description" content="2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027）；2027年5月25-28日；莫斯科Crocus Expo（克洛库斯国际会展中心），含室内展馆+室外展场。抚顺顺隆科技提供展位申请、展台搭建与展会地接一站式服务。">
+<link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32.png"><link rel="icon" type="image/png" sizes="64x64" href="../media/favicon.png">
+<style>
+/* ==================================================
+   设计 token
+   navy   #0a2b57  基础色 / 深色区块背景
+   blue   #1263c4  品牌蓝（链接、状态）
+   gold   #c09a4f  唯一强调色
+   paper  #f3f5f8  浅色区块
+   ink    #14181f  正文
+   line   #e3e7ee  分隔线
+   ================================================== */
+:root{
+  --navy:#0a2b57;
+  --navy-deep:#071f3f;
+  --blue:#1263c4;
+  --gold:#c09a4f;
+  --paper:#f3f5f8;
+  --ink:#14181f;
+  --muted:#5b6675;
+  --line:#e3e7ee;
+  --white:#fff;
+  --wrap:1240px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Source Han Sans SC","Microsoft YaHei",sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  font-size:15px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+h1,h2,h3,h4,p,figure{margin:0;}
+a{color:inherit;text-decoration:none;}
+ul{margin:0;padding:0;list-style:none;}
+button,input,textarea{font-family:inherit;font-size:inherit;color:inherit;}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
+
+/* ---------- 通用：区块标题 ---------- */
+.sec{padding:60px 0;scroll-margin-top:56px;}
+#reception,#ground{scroll-margin-top:72px;}
+.sec-head{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:32px;
+}
+.sec-en{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:12px;
+  letter-spacing:.22em;
+  color:var(--gold);
+  text-transform:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.sec-en::before{
+  content:"";
+  width:18px;height:1px;background:var(--gold);display:block;
+}
+.sec-title{font-size:24px;line-height:1.35;font-weight:700;letter-spacing:.02em;}
+.sec-lead{color:var(--muted);font-size:14px;line-height:1.9;max-width:44em;}
+
+/* ---------- 页头 ---------- */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:120;
+  transition:background .35s ease, box-shadow .35s ease;
+}
+.header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:60px;gap:16px;
+}
+.header.solid{
+  background:rgba(255,255,255,.96);
+  box-shadow:0 1px 0 var(--line);
+  backdrop-filter:saturate(140%) blur(6px);
+}
+.logo{display:flex;align-items:center;gap:9px;color:var(--white);transition:color .35s ease;}
+.header.solid .logo{color:var(--navy);}
+.logo svg{width:32px;height:32px;flex:none;}
+.logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.logo-cn{font-size:15px;font-weight:700;letter-spacing:.04em;white-space:nowrap;}
+.logo-en{font-family:Georgia,serif;font-size:9px;letter-spacing:.14em;opacity:.72;white-space:nowrap;}
+
+.nav{display:none;}
+.nav a{
+  position:relative;padding:6px 0;font-size:14px;color:rgba(255,255,255,.86);
+  transition:color .25s ease;
+  white-space:nowrap;
+}
+.header.solid .nav a{color:#2b3441;}
+.nav a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);
+  transition:width .3s ease;
+}
+.nav a:hover{color:var(--white);}
+.header.solid .nav a:hover{color:var(--navy);}
+.nav a:hover::after{width:100%;}
+
+.head-phone{display:none;align-items:center;gap:8px;font-family:Georgia,serif;font-size:13px;letter-spacing:.04em;color:var(--white);}
+.header.solid .head-phone{color:var(--navy);}
+.head-phone svg{width:15px;height:15px;}
+
+.menu-btn{
+  width:40px;height:40px;margin-right:-8px;border:0;background:transparent;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;
+  cursor:pointer;padding:0;
+}
+.menu-btn i{display:block;height:1.5px;background:var(--white);transition:all .3s ease;}
+.menu-btn i:nth-child(1){width:22px;}
+.menu-btn i:nth-child(2){width:15px;}
+.header.solid .menu-btn i{background:var(--navy);}
+body.nav-open .menu-btn i{background:var(--white);}
+body.nav-open .menu-btn i:nth-child(1){width:22px;transform:translateY(6.5px) rotate(45deg);}
+body.nav-open .menu-btn i:nth-child(2){width:22px;transform:translateY(-0px) rotate(-45deg);}
+
+/* 移动端菜单 */
+.mobile-nav{
+  position:fixed;inset:0;z-index:110;background:var(--navy-deep);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 28px 40px;
+  opacity:0;visibility:hidden;transition:opacity .3s ease, visibility .3s;
+}
+body.nav-open .mobile-nav{opacity:1;visibility:visible;}
+body.nav-open{overflow:hidden;}
+body.nav-open .header{background:transparent;box-shadow:none;backdrop-filter:none;}
+body.nav-open .header .logo{color:#fff;}
+.mobile-nav a{
+  color:#fff;font-size:19px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.mobile-nav a span{font-family:Georgia,serif;font-size:11px;color:rgba(255,255,255,.42);letter-spacing:.1em;}
+.mobile-nav .m-foot{margin-top:26px;color:rgba(255,255,255,.6);font-size:13px;line-height:2;}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;height:88vh;min-height:560px;max-height:760px;overflow:hidden;background:var(--navy-deep);}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;pointer-events:none;}
+.hero-slide.is-active{opacity:1;pointer-events:auto;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-slide::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(5,22,46,.94) 0%,rgba(5,22,46,.78) 40%,rgba(5,22,46,.34) 72%,rgba(5,22,46,.22) 100%);
+}
+.hero-slide.is-active .hero-cap{opacity:1;transform:none;}
+.hero-cap{
+  position:absolute;z-index:3;left:0;right:0;bottom:96px;
+  color:#fff;opacity:0;transform:translateY(18px);
+  transition:opacity .8s ease .15s, transform .8s cubic-bezier(.2,.7,.2,1) .15s;
+}
+.hero-kicker{
+  font-family:Georgia,serif;font-size:11px;letter-spacing:.2em;color:var(--gold);
+  margin-bottom:18px;
+}
+.hero-cap h1{
+  font-size:clamp(28px,7vw,54px);
+  line-height:1.16;font-weight:700;letter-spacing:.02em;
+  max-width:14em;
+}
+.hero-cap p{
+  margin-top:16px;color:rgba(255,255,255,.78);
+  font-size:14px;line-height:1.9;max-width:34em;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:0 22px;border:1px solid transparent;
+  font-size:14px;letter-spacing:.04em;cursor:pointer;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+.btn-gold{background:var(--gold);color:#10203a;border-color:var(--gold);}
+.btn-gold:hover{background:#d2ab63;border-color:#d2ab63;}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.42);}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.btn-navy{background:var(--navy);color:#fff;border-color:var(--navy);}
+.btn-navy:hover{background:#0d3a72;border-color:#0d3a72;}
+
+.hero-ctrl{
+  position:absolute;z-index:4;left:0;right:0;bottom:26px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.hero-dots{display:flex;gap:16px;align-items:center;}
+.hero-dot{
+  display:flex;align-items:center;gap:8px;background:none;border:0;padding:8px 0;
+  cursor:pointer;color:rgba(255,255,255,.5);font-family:Georgia,serif;font-size:11px;
+  letter-spacing:.1em;min-height:44px;
+}
+.hero-dot b{font-weight:400;}
+.hero-dot .bar{display:block;width:16px;height:1px;background:rgba(255,255,255,.4);transition:all .35s ease;}
+.hero-dot.is-active{color:#fff;}
+.hero-dot.is-active .bar{width:36px;background:var(--gold);}
+.hero-arrows{display:flex;gap:8px;}
+.arrow-btn{
+  width:44px;height:44px;border:1px solid rgba(255,255,255,.32);background:transparent;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:all .25s ease;color:#fff;
+}
+.arrow-btn:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+.arrow-btn svg{width:16px;height:16px;}
+
+/* ---------- 关于我们 ---------- */
+.about-grid{display:grid;gap:32px;}
+.about-copy p{color:#39424f;font-size:14.5px;line-height:1.95;margin-bottom:14px;}
+.about-copy p:last-of-type{margin-bottom:0;}
+.about-figure{position:relative;}
+.about-figure img{width:100%;height:260px;object-fit:cover;object-position:center;}
+.about-figure figcaption{
+  margin-top:12px;font-family:Georgia,serif;font-size:11px;letter-spacing:.12em;color:var(--muted);
+}
+.stats{
+  margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;
+  border-top:1px solid var(--line);padding-top:24px;
+}
+.stat b{
+  font-family:Georgia,serif;font-size:32px;font-weight:700;color:var(--navy);
+  line-height:1;letter-spacing:-.01em;
+}
+.stat b i{font-style:normal;font-size:14px;color:var(--gold);margin-left:2px;letter-spacing:0;}
+.stat span{display:block;margin-top:6px;font-size:12.5px;color:var(--muted);letter-spacing:.04em;}
+
+/* ---------- 服务范畴 ---------- */
+.services{background:var(--paper);}
+.service-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.service{
+  background:#fff;border:1px solid var(--line);padding:26px 22px;
+  transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.service:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(10,43,87,.45);}
+.service svg{width:26px;height:26px;color:var(--navy);margin-bottom:16px;}
+.service:hover svg{color:var(--gold);}
+.service h3{font-size:16px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;}
+.service p{font-size:13.5px;line-height:1.85;color:var(--muted);}
+
+.service-more{margin-top:26px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.service-more p{font-size:13px;color:var(--muted);}
+
+/* ---------- 展会排期（展地对接卡片） ---------- */
+.expo-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.expo-card{
+  position:relative;display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--line);padding:24px 22px 22px;
+  transition:border-color .3s ease,transform .3s ease,box-shadow .3s ease;
+}
+.expo-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 16px 34px -26px rgba(10,43,87,.5);}
+.expo-top{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.expo-top::after{content:"";flex:1;height:1px;background:var(--line);order:1;}
+.expo-no{font-family:Georgia,serif;font-size:12px;letter-spacing:.14em;color:var(--gold);}
+.expo-tag{
+  order:2;font-size:11px;line-height:1;letter-spacing:.08em;color:#0a2b57;
+  border:1px solid #c9d7e8;background:#eef4fc;padding:5px 9px;white-space:nowrap;
+}
+.expo-card:hover .expo-tag{border-color:#e4d5b7;background:#fbf6ea;color:#8a6b28;}
+.expo-name{font-size:16.5px;font-weight:700;line-height:1.55;letter-spacing:.02em;color:var(--ink);}
+.expo-meta{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:12px;}
+.expo-item{display:grid;grid-template-columns:82px minmax(0,1fr);gap:10px;align-items:start;}
+.expo-item dt{
+  display:flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.06em;
+  color:var(--muted);line-height:1.9;white-space:nowrap;
+}
+.expo-item dt svg{width:13px;height:13px;color:var(--gold);flex:none;}
+.expo-item dd{margin:0;font-size:14px;line-height:1.75;color:#2b3441;}
+.expo-item dd time{font-family:inherit;color:var(--navy);letter-spacing:.02em;font-variant-numeric:tabular-nums;}
+
+.expo-note{
+  margin-top:26px;display:grid;gap:6px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);line-height:1.9;
+}
+.expo-note a{color:var(--navy);border-bottom:1px solid var(--gold);}
+
+/* ---------- 展会搭建 ---------- */
+.build{background:var(--navy-deep);color:#fff;}
+.build .sec-head{border-bottom-color:rgba(255,255,255,.14);}
+.build .sec-lead{color:rgba(255,255,255,.66);}
+.build-grid{display:grid;gap:34px;}
+.build-figure{position:relative;}
+.build-figure img{width:100%;height:280px;object-fit:cover;}
+.build-figure .tag{
+  position:absolute;left:0;bottom:0;background:var(--gold);color:#10203a;
+  font-size:12px;letter-spacing:.08em;padding:8px 14px;
+}
+.timeline{position:relative;display:grid;gap:24px;}
+.timeline::before{
+  content:"";position:absolute;left:43.5px;top:14px;bottom:14px;width:1px;
+  background:rgba(255,255,255,.18);
+}
+.tl-step{display:grid;grid-template-columns:34px 20px 1fr;align-items:start;}
+.tl-no{
+  grid-column:1;font-family:Georgia,serif;font-size:12px;color:var(--gold);
+  text-align:right;padding-top:2px;
+}
+.tl-dot{
+  grid-column:2;justify-self:center;width:8px;height:8px;margin-top:8px;
+  border-radius:50%;background:var(--gold);position:relative;z-index:2;
+}
+.tl-body{padding-left:4px;}
+.tl-body h3{font-size:15.5px;font-weight:700;letter-spacing:.03em;}
+.tl-body p{font-size:13.5px;line-height:1.9;color:rgba(255,255,255,.62);margin-top:4px;}
+
+.build-specs{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+.build-specs span{
+  font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.8);
+  border:1px solid rgba(255,255,255,.2);padding:6px 12px;
+}
+
+/* ---------- 商务考察 / 展会地接 ---------- */
+.serve-grid{display:grid;gap:20px;}
+.serve-card{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;}
+.serve-card figure{margin:0;overflow:hidden;}
+.serve-card img{width:100%;height:200px;object-fit:cover;transition:transform .6s ease;}
+.serve-card:hover img{transform:scale(1.03);}
+.serve-body{padding:24px 22px 26px;flex:1;display:flex;flex-direction:column;}
+.serve-body h3{font-size:19px;font-weight:700;letter-spacing:.04em;}
+.serve-body .sub{font-family:Georgia,serif;font-size:11px;letter-spacing:.16em;color:var(--gold);margin-top:6px;}
+.serve-list{margin-top:16px;display:grid;gap:10px;}
+.serve-list li{display:grid;grid-template-columns:8px 1fr;gap:10px;font-size:13.5px;line-height:1.8;color:#3d4856;}
+.serve-list li em{display:block;width:5px;height:5px;margin-top:9px;background:var(--gold);font-style:normal;}
+.serve-list li b{font-weight:700;color:var(--ink);}
+
+/* ---------- 新闻中心 ---------- */
+.news{background:var(--paper);}
+.news-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+.news-card{
+  background:#fff;border:1px solid var(--line);padding:24px 22px;display:flex;flex-direction:column;
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.news-card:hover{border-color:#cbd5e2;box-shadow:0 18px 36px -30px rgba(10,43,87,.4);}
+.news-top{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);letter-spacing:.04em;}
+.news-top .cat{color:var(--navy);border-left:2px solid var(--gold);padding-left:8px;}
+.news-top time{font-family:Georgia,serif;letter-spacing:.06em;}
+.news-card h3{margin-top:14px;font-size:16.5px;line-height:1.6;font-weight:700;}
+.news-card p{margin-top:10px;font-size:13.5px;line-height:1.85;color:var(--muted);flex:1;}
+.news-link{
+  margin-top:18px;align-self:flex-start;background:none;border:0;padding:8px 0;
+  font-size:13px;color:var(--navy);letter-spacing:.04em;cursor:pointer;position:relative;min-height:40px;
+}
+.news-link::after{content:"";position:absolute;left:0;bottom:4px;width:100%;height:1px;background:var(--gold);opacity:.5;transition:opacity .25s;}
+.news-link:hover::after{opacity:1;}
+
+/* ---------- 联系我们 ---------- */
+.contact{background:var(--navy);color:#fff;}
+.contact .sec-head{border-bottom-color:rgba(255,255,255,.16);}
+.contact .sec-lead{color:rgba(255,255,255,.62);}
+.contact-grid{display:grid;gap:30px;}
+.contact-info{display:grid;gap:22px;}
+.ci{display:grid;grid-template-columns:22px 1fr;gap:14px;}
+.ci svg{width:20px;height:20px;color:var(--gold);margin-top:4px;}
+.ci span{display:block;font-size:12px;letter-spacing:.14em;color:rgba(255,255,255,.5);}
+.ci b{display:block;font-weight:400;font-size:15px;line-height:1.8;margin-top:2px;color:#fff;}
+.ci b em{font-style:normal;color:rgba(255,255,255,.62);font-size:13px;margin-left:8px;}
+
+.form-card{background:#fff;color:var(--ink);padding:26px 22px 28px;}
+.form-card h3{font-size:17px;font-weight:700;letter-spacing:.04em;}
+.form-card .form-sub{font-size:12.5px;color:var(--muted);margin-top:6px;}
+.form-grid{display:grid;gap:14px;margin-top:20px;}
+.field label{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;}
+.field input,.field textarea{
+  width:100%;border:1px solid var(--line);background:#fbfcfd;
+  padding:11px 12px;font-size:16px;line-height:1.6;border-radius:0;
+  transition:border-color .25s ease, background .25s ease;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--navy);background:#fff;}
+.field textarea{min-height:96px;resize:vertical;}
+.form-grid .btn-gold{width:100%;margin-top:4px;}
+.form-tip{font-size:11.5px;color:#8a94a3;margin-top:10px;line-height:1.7;}
+
+/* ---------- 页脚 ---------- */
+.footer{background:var(--navy-deep);color:rgba(255,255,255,.66);padding:44px 0 26px;font-size:13px;}
+.footer-top{display:grid;gap:26px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12);}
+.footer-brand .logo{color:#fff;}
+.footer-brand p{margin-top:14px;line-height:1.9;color:rgba(255,255,255,.55);max-width:26em;font-size:12.5px;}
+.footer-links h4{font-size:12px;letter-spacing:.14em;color:rgba(255,255,255,.5);margin-bottom:12px;font-weight:400;}
+.footer-links ul{display:grid;gap:8px;grid-template-columns:1fr 1fr;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.72);transition:color .25s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{
+  margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  font-size:12px;color:rgba(255,255,255,.45);
+}
+
+/* ---------- 浮动按钮 / toast ---------- */
+.to-top{
+  position:fixed;right:16px;bottom:20px;z-index:90;width:44px;height:44px;
+  background:var(--navy);color:#fff;border:0;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:all .3s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none;}
+.to-top:hover{background:#0d3a72;}
+.to-top svg{width:16px;height:16px;}
+
+.toast{
+  position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);
+  background:rgba(7,31,63,.96);color:#fff;font-size:13.5px;line-height:1.6;
+  padding:12px 20px;z-index:200;max-width:calc(100% - 40px);
+  opacity:0;visibility:hidden;transition:all .3s ease;text-align:center;
+  border-left:2px solid var(--gold);
+}
+.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0);}
+
+/* ==================================================
+   平板 / 桌面
+   ================================================== */
+@media (min-width:768px){
+  body{font-size:16px;}
+  .wrap{padding:0 32px;}
+  .sec{padding:80px 0;}
+  .sec-head{
+    grid-template-columns:minmax(0,1fr) minmax(0,520px);
+    align-items:end;gap:32px;padding-bottom:26px;margin-bottom:40px;
+  }
+  .sec-title{font-size:28px;}
+  .sec-lead{grid-column:2;grid-row:1;justify-self:end;text-align:left;align-self:end;}
+  .header .wrap{height:76px;}
+  .logo svg{width:38px;height:38px;}
+  .logo-cn{font-size:16px;}
+  .logo-en{font-size:10px;}
+  .about-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+  .about-figure img{height:400px;}
+  .stats{grid-template-columns:repeat(4,1fr);gap:12px;}
+  .service-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+  .expo-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+  .expo-card{padding:26px 24px 24px;}
+  .build-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .build-figure img{height:420px;}
+  .serve-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .news-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .form-card{padding:32px 30px 34px;}
+  .form-grid{grid-template-columns:1fr 1fr;gap:16px;}
+  .field.full{grid-column:1 / -1;}
+  .footer{padding:56px 0 30px;}
+  .footer-top{grid-template-columns:1.4fr .8fr;gap:40px;}
+  .to-top{right:24px;bottom:28px;width:48px;height:48px;}
+}
+
+@media (min-width:1080px){
+  .nav{display:flex;align-items:center;gap:24px;}
+  .menu-btn{display:none;}
+  .head-phone{display:flex;}
+  .hero-cap h1{font-size:clamp(40px,3.6vw,52px);}
+  .hero-cap p{font-size:15px;}
+  .service-grid{grid-template-columns:repeat(3,1fr);gap:18px;}
+  .expo-grid{grid-template-columns:repeat(3,1fr);gap:18px;}
+  .expo-name{font-size:17.5px;}
+  .service{padding:32px 28px 34px;}
+  .about-figure img{height:440px;}
+  .sec-title{font-size:32px;}
+  .sec-lead{font-size:14.5px;max-width:38em;}
+}
+
+@media (min-width:1200px){
+  .nav{gap:28px;}
+  .hero-cap p{max-width:38em;}
+}
+
+/* ---------- 占位图（后续替换为真实照片） ---------- */
+.ph{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  background:#eef1f6;border:1px solid #dfe4ec;overflow:hidden;
+}
+.ph::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(135deg,rgba(10,43,87,.045) 0 1px,transparent 1px 11px);
+}
+.ph span{
+  position:relative;z-index:2;font-size:12px;letter-spacing:.16em;line-height:1.6;
+  padding:7px 14px;border:1px solid rgba(10,43,87,.16);background:rgba(255,255,255,.62);
+  color:#8b97a7;text-align:center;
+}
+.ph-sm span{font-size:11px;letter-spacing:.12em;padding:5px 10px;}
+.ph-hero{
+  width:100%;height:100%;border:0;
+  background:linear-gradient(150deg,#0a2b57 0%,#123c72 55%,#081f3d 100%);
+}
+.ph-hero::before{background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px);}
+.ph-hero span{
+  color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.2);
+  background:rgba(255,255,255,.07);
+}
+.about-figure .ph{height:260px;}
+.build-figure .ph{height:280px;}
+.serve-card .ph{height:200px;}
+
+@media (min-width:768px){
+  .about-figure .ph{height:400px;}
+  .build-figure .ph{height:420px;}
+  .serve-card .ph{height:220px;}
+}
+@media (min-width:1080px){
+  .about-figure .ph{height:440px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+  .hero-slide{transition:none;}
+}
+
+/* ---------- 多页面补充样式 ---------- */
+.nav a.active{color:var(--navy);}
+.header.solid .nav a.active{color:var(--navy);}
+.nav a.active::after{width:100%;}
+
+/* ---------- 页头：白底（对齐参考站样式） ---------- */
+.header{background:rgba(255,255,255,.98);box-shadow:0 1px 0 var(--line);backdrop-filter:saturate(140%) blur(6px);}
+.logo-img{height:40px;width:132px;object-fit:cover;object-position:center;display:block;}
+.nav a{color:#2b3441;}
+.nav a:hover{color:var(--navy);}
+.head-phone{color:var(--navy);}
+.header .menu-btn i{background:var(--navy);}
+body.nav-open .header{background:rgba(255,255,255,.98);box-shadow:0 1px 0 var(--line);}
+body.nav-open .menu-btn i{background:#fff;}
+
+/* ---------- 首页栏目入口 ---------- */
+.entry-list{border-top:1px solid var(--line);}
+.entry{
+  display:grid;grid-template-columns:1fr auto 20px;align-items:center;gap:14px;
+  padding:19px 2px;border-bottom:1px solid var(--line);
+  transition:padding .25s ease, background .25s ease;
+}
+.entry-name{font-size:16.5px;font-weight:700;letter-spacing:.06em;color:var(--ink);}
+.entry-en{font-family:Georgia,serif;font-size:11px;letter-spacing:.16em;color:var(--muted);}
+.entry svg{width:15px;height:15px;color:var(--gold);justify-self:end;}
+.entry:hover{padding-left:10px;background:#fafbfd;}
+.entry:hover .entry-name{color:var(--navy);}
+
+@media (min-width:768px){
+  .logo-img{height:45px;width:148px;}
+  .entry{padding:23px 6px;}
+  .entry-name{font-size:19px;}
+}
+@media (min-width:1080px){
+  .logo-img{height:50px;width:165px;}
+}
+
+.page-hero{position:relative;background:var(--navy-deep);color:#fff;padding:100px 0 38px;}
+.page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.12);}
+.crumb{display:flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-bottom:14px;}
+.crumb a{color:rgba(255,255,255,.78);}
+.crumb a:hover{color:var(--gold);}
+.page-hero .en{font-family:Georgia,serif;font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:10px;}
+.page-hero h1{font-size:clamp(26px,4.6vw,40px);line-height:1.25;font-weight:700;letter-spacing:.03em;}
+.page-hero p.lead{margin-top:14px;font-size:14px;line-height:1.95;color:rgba(255,255,255,.68);max-width:44em;}
+
+.cta-band{background:var(--paper);border-top:1px solid var(--line);}
+.cta-inner{display:grid;gap:16px;padding:38px 0;}
+.cta-inner h3{font-size:19px;font-weight:700;letter-spacing:.03em;line-height:1.5;}
+.cta-inner p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.8;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:10px;}
+
+.info-rows{border-top:1px solid var(--line);}
+.info-row{display:grid;gap:3px;padding:14px 0;border-bottom:1px solid var(--line);}
+.info-row span{font-size:12px;letter-spacing:.12em;color:var(--muted);}
+.info-row b{font-weight:400;font-size:15px;line-height:1.8;color:var(--ink);}
+
+.timeline.light::before{background:var(--line);}
+.timeline.light .tl-body h3{color:var(--ink);}
+.timeline.light .tl-body p{color:var(--muted);}
+
+.service-link{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;font-size:13px;color:var(--navy);}
+.service-link svg{width:14px;height:14px;color:var(--gold);flex:none;}
+
+.contact-light{background:#fff;color:var(--ink);}
+.contact-light .sec-head{border-bottom-color:var(--line);}
+.contact-light .sec-lead{color:var(--muted);}
+.contact-light .ci span{color:var(--muted);}
+.contact-light .ci b{color:var(--ink);}
+.contact-light .ci b em{color:var(--muted);}
+.contact-light .form-card{border:1px solid var(--line);background:var(--paper);}
+
+@media (min-width:768px){
+  .page-hero{padding:128px 0 54px;}
+  .page-hero h1{font-size:38px;}
+  .page-hero p.lead{font-size:15px;}
+  .cta-inner{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:32px;padding:46px 0;}
+  .info-row{grid-template-columns:170px minmax(0,1fr);align-items:baseline;gap:20px;padding:16px 0;}
+}
+
+
+/* ---------- 展会列表 LOGO 卡片 ---------- */
+.expo-logo{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);height:150px;padding:18px;margin-bottom:16px;overflow:hidden;}
+.expo-logo img{max-height:110px;max-width:100%;object-fit:contain;}
+a.expo-card{text-decoration:none;color:inherit;}
+
+
+/* ---------- 展会详情 ---------- */
+.expo-detail{max-width:940px;margin:0 auto;}
+.expo-logo-card{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);padding:36px 28px;margin-bottom:30px;min-height:170px;}
+.expo-logo-card img{max-height:132px;max-width:100%;object-fit:contain;}
+.detail-info{background:var(--paper);border:1px solid var(--line);padding:6px 26px;margin-bottom:36px;}
+.detail-body{display:grid;gap:16px;}
+.detail-body h2{font-size:20px;font-weight:700;color:var(--navy);padding-left:13px;border-left:3px solid var(--gold);margin-top:18px;line-height:1.4;}
+.detail-body h3{font-size:16px;font-weight:700;color:var(--ink);margin-top:8px;}
+.detail-body p{color:#2b3441;font-size:15px;line-height:1.95;}
+.detail-body p-strong,.detail-body .p-strong{font-weight:700;color:var(--ink);}
+.detail-body ul{display:grid;gap:10px;margin:4px 0;}
+.detail-body li{display:grid;grid-template-columns:8px 1fr;gap:10px;font-size:14.5px;line-height:1.85;color:#3d4856;}
+.detail-body li em{display:block;width:5px;height:5px;margin-top:10px;background:var(--gold);font-style:normal;}
+.li-head{font-weight:700;color:var(--navy);margin-top:10px;font-size:15px;}
+.detail-img{margin:12px 0;}
+.detail-img img{width:100%;border:1px solid var(--line);}
+.gallery-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px;}
+.gallery-grid img{width:100%;height:230px;object-fit:cover;border:1px solid var(--line);}
+@media (min-width:768px){
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+}
+@media (min-width:1080px){
+  .gallery-grid{grid-template-columns:repeat(3,1fr);}
+}
+/* 列表 LOGO 卡片 */
+.expo-logo{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);height:150px;padding:18px;margin-bottom:16px;overflow:hidden;}
+.expo-logo img{max-height:110px;max-width:100%;object-fit:contain;}
+.expo-card{text-decoration:none;color:inherit;}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="logo" href="../index.html" aria-label="抚顺顺隆科技有限公司 首页">
+      <img class="logo-img" src="../media/logo.jpg" alt="抚顺顺隆科技有限公司">
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="关于我们.html">关于我们</a>
+      <a href="展会排期.html" class="active">展会排期</a>
+      <a href="展会搭建.html">展会搭建</a>
+      <a href="新闻中心.html">新闻中心</a>
+      <a href="商务考察.html">商务考察</a>
+      <a href="展会地接.html">展会地接</a>
+      <a href="联系我们.html">联系我们</a>
+    </nav>
+    <a class="head-phone" href="tel:15898388881">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+      15898388881
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="展开菜单" aria-expanded="false" aria-controls="mobileNav">
+      <i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav aria-label="移动端导航">
+    <a href="关于我们.html">关于我们 <span>ABOUT</span></a>
+    <a href="展会排期.html">展会排期 <span>SCHEDULE</span></a>
+    <a href="展会搭建.html">展会搭建 <span>BUILD</span></a>
+    <a href="新闻中心.html">新闻中心 <span>NEWS</span></a>
+    <a href="商务考察.html">商务考察 <span>BUSINESS VISIT</span></a>
+    <a href="展会地接.html">展会地接 <span>GROUND</span></a>
+    <a href="联系我们.html">联系我们 <span>CONTACT</span></a>
+  </nav>
+  <div class="m-foot">
+    15898388881<br>
+    info@shunlongexpo.com<br>
+    辽宁省抚顺市顺城区新城路东段 12 号
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑"><a href="../index.html">首页</a><span>/</span><a href="展会排期.html">展会排期</a><span>/</span>2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027）</nav>
+      <p class="en">EXPO PROFILE 2027</p>
+      <h1>2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027）</h1>
+      <p class="lead">2027年5月25-28日 · 莫斯科Crocus Expo（克洛库斯国际会展中心），含室内展馆+室外展场</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap expo-detail">
+      <div class="expo-logo-card"><img src="../media/expo/logistika-logo.png" alt="2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027） LOGO"></div>
+      <div class="detail-info">
+          <div class="info-row"><span>展会名称</span><b>2027 物流、运输、仓储技术与装备国际交易博览会（Logistika Expo 2027）</b></div>
+          <div class="info-row"><span>展会时间</span><b>2027年5月25-28日</b></div>
+          <div class="info-row"><span>展会地点</span><b>莫斯科Crocus Expo（克洛库斯国际会展中心），含室内展馆+室外展场</b></div>
+          <div class="info-row"><span>展会周期</span><b>一年一届</b></div>
+          <div class="info-row"><span>主办单位</span><b>Sigma Expo Group</b></div>
+      </div>
+      <div class="detail-body">
+        <h2>展会概况</h2>
+        <p>Logistika Expo是俄罗斯聚焦仓储、运输、供应链数字化的专业B2B物流装备展，属于EXPO+联展矩阵，同期和COMvex商用车展、CTO Expo汽配售后展、CTT Expo工程机械展同馆举办，共享工程、运输、车队、制造行业采购流量。展会配套双线商务论坛，分为仓储自动化、运输物流两大主题方向，同时举办“年度车队”行业评选、案例分享会、供需对接会，围绕重型大件运输、冷链物流、仓储机器人、库存数字化管理、跨境供应链方案等行业热点展开研讨。 到场观众以第三方物流企业、仓储运营商、生产制造企业供应链负责人、货运公司、电商仓储、大型车队、港口及货运枢纽采购负责人为主，覆盖俄罗斯全境以及白俄罗斯、哈萨克斯坦等独联体国家，是俄语区仓储设备、搬运装备、物流软件、包装耗材厂商对接渠道和终端项目客户的核心商贸平台。</p>
+        <h2>展品范围</h2>
+        <ul>
+        <li><em></em><span>仓储货架及存储系统：重型/中型/轻型货架、穿梭车货架、阁楼货架、自动化立体库、仓储隔断、托盘、料箱</span></li>
+        <li><em></em><span>搬运装卸设备：叉车、电动堆高车、搬运车、AGV/AMR机器人、升降平台、登车桥、起重机</span></li>
+        <li><em></em><span>仓储自动化技术：分拣系统、输送线、扫码识别设备、RFID、仓储机器人、自动化打包设备</span></li>
+        <li><em></em><span>物流IT与供应链软件：WMS仓储管理系统、TMS运输管理系统、车队调度软件、订单管理、追溯系统</span></li>
+        <li><em></em><span>包装、防护耗材：缠绕膜、打包带、缓冲材料、集装箱配件、冷链保温包装、标识标签</span></li>
+        <li><em></em><span>冷链物流装备：冷藏集装箱、保温车厢、温控监测设备、冷库配套设备</span></li>
+        <li><em></em><span>货运与运输配套：集装箱、挂车配套、大件运输装备、危化品运输配套、车载监控终端</span></li>
+        <li><em></em><span>物流服务与配套：货运代理、仓储规划设计、物流园区方案、检测认证、行业媒体</span></li>
+        </ul>
+        <h2>市场分析</h2>
+        <p>俄罗斯国内长途货运、工业仓储、电商履约、大件工程运输需求持续旺盛，本土自动化仓储设备、智能搬运设备、物流信息化方案供给缺口明显。随着本土企业降本增效、仓库升级改造需求释放，国内叉车、货架、分拣设备、WMS系统、包装耗材产品性价比优势突出，市场接受度持续提升。 Logistika Expo依托联展的协同效应，可以同时触达物流服务商、生产工厂、工程公司、运输车队等多元买家，适合国内仓储物流装备企业开发俄语区代理商、承接仓储改造项目，熟悉当地工况标准、认证要求，布局俄罗斯及独联体物流赛道。</p>
+        <h2>上届展会数据（Logistika Expo 2026）</h2>
+        <p>展商数量：100+家企业</p>
+        <p>专业观众：20000+人次（不含联展其他板块流量）</p>
+        <p>联展整体规模：EXPO+四大联展合计展商1700余家，总专业观众80000+人次</p>
+        <p>观众行业：物流服务商、制造企业供应链部门、电商仓储、货运公司、工程总包、车队运营商为主</p>
+        <figure class="detail-img"><img src="../media/expo/logistika-1.jpg" alt="展会现场图片" loading="lazy"></figure>
+        <figure class="detail-img"><img src="../media/expo/logistika-2.jpg" alt="展会现场图片" loading="lazy"></figure>
+        <figure class="detail-img"><img src="../media/expo/logistika-3.jpg" alt="展会现场图片" loading="lazy"></figure>
+        <figure class="detail-img"><img src="../media/expo/logistika-4.jpg" alt="展会现场图片" loading="lazy"></figure>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h3>计划参展 俄罗斯市场？</h3>
+        <p>展位申请、展台搭建、商务考察与展会地接，专属顾问一对一对接。</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-navy" href="联系我们.html">咨询展位方案</a>
+        <a class="btn btn-ghost" style="color:var(--navy);border-color:#c9d7e8;" href="展会排期.html">返回展会排期</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="../index.html">
+          <span class="logo-text">
+            <span class="logo-cn">抚顺顺隆科技有限公司</span>
+            <span class="logo-en">SHUNLONG TECHNOLOGY</span>
+          </span>
+        </a>
+        <p>国际展会业务 · 展台搭建 · 商务考察 · 展会地接 · 跨境商务支持。服务网络辐射俄罗斯、巴西、美国、意大利、中亚、波兰、白俄罗斯等核心市场。</p>
+      </div>
+      <div class="footer-links">
+        <h4>网站导航</h4>
+        <ul>
+          <li><a href="关于我们.html">关于我们</a></li>
+          <li><a href="展会排期.html">展会排期</a></li>
+          <li><a href="展会搭建.html">展会搭建</a></li>
+          <li><a href="新闻中心.html">新闻中心</a></li>
+          <li><a href="商务考察.html">商务考察</a></li>
+          <li><a href="展会地接.html">展会地接</a></li>
+          <li><a href="联系我们.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 抚顺顺隆科技有限公司　辽ICP备00000000号</span>
+      <span>15898388881　info@shunlongexpo.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="返回顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var header = document.getElementById('header');
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    if (y > 40) header.classList.add('solid'); else header.classList.remove('solid');
+    if (y > 600) toTop.classList.add('show'); else toTop.classList.remove('show');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  function setMenu(open){
+    document.body.classList.toggle('nav-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobileNav.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+  menuBtn.addEventListener('click', function(){ setMenu(!document.body.classList.contains('nav-open')); });
+  Array.prototype.forEach.call(mobileNav.querySelectorAll('a'), function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  toTop.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+})();
+</script>
+<script src="../media/i18n.js"></script>
+</body>
+</html>
